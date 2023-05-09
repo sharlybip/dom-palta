@@ -34,18 +34,18 @@ window.fetch(`${baseurl}/api/avo`)
     responseJson.data.map(item => {
         //crear imagen
         const image = document.createElement('img');
-        image.className = 'img';
+        image.className = 'transition delay-150 duration-300 ease-in-out';
         image.src = `${baseurl}${item.image}`
         //crear titulo
         const title = document.createElement('h2');
-        title.className = 'text-xl text-black-600';
+        title.className = 'text-xl text-black-600 hover:text-gray-400';
         title.textContent = item.name;
         //crear precio
         const price = document.createElement('div');
         price.className = 'price';
         price.textContent = formatPrice(item.price);
         const container = document.createElement('div');
-        container.className = 'container';
+        container.className = 'container transform hover:scale-90';
         container.append(image,title,price);
         todosLosItems.push(container);
     })
