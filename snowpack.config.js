@@ -5,6 +5,6 @@ module.exports = {
     src: '/_dist_',
   },
   buildOptions: {
-    baseUrl: 'https://sharlybip.github.io/dom-palta',
+    baseUrl: './',
   },
 }
