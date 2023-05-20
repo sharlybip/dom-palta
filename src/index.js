@@ -1,7 +1,5 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+import './index.css';
+
 
 const baseurl = "https://platzi-avo.vercel.app";
 //web API con promesas
@@ -9,8 +7,13 @@ const baseurl = "https://platzi-avo.vercel.app";
 //procesar la respuesta y convertirla en JSON
 //JSON -> Data -> renderizar
 /////////////////////////////////////////////////////////////////////////
-const appNode =  document.querySelector('#app')
+const appNode =  document.querySelector('#app');
 appNode.classList = 'grid grid-cols-3'
+appNode.addEventListener('click', (event) => {
+	if (event.target.nodeName === 'H2' ) {
+		window.alert('hola');
+	}
+});
 
 //intl
 //1 - format date
@@ -40,6 +43,9 @@ window.fetch(`${baseurl}/api/avo`)
         const title = document.createElement('h2');
         title.className = 'text-xl text-black-600 hover:text-gray-400';
         title.textContent = item.name;
+        title.addEventListener('click', ()=> {
+            window.alert('hola');
+        })
         //crear precio
         const price = document.createElement('div');
         price.className = 'price';
