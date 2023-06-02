@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container {
+    width: fit-content;
+}
+p.description {
+    color: rgb(87, 186, 0);
+}
